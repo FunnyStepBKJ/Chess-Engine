@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ChessEngine.dir/src/main.cpp.o -o ChessEngine  /usr/lib/libQt5Widgets.so.5.15.15 /usr/lib/libQt5Gui.so.5.15.15 /usr/lib/libQt5Core.so.5.15.15

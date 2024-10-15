@@ -1,0 +1,9 @@
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/chess_engine_ui.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/install.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/chess_engine_ui_autogen_timestamp_deps.dir
+/home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/CMakeFiles/chess_engine_ui_autogen.dir

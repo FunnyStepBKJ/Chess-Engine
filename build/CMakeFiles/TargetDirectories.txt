@@ -1,0 +1,3 @@
+/home/manvendra/projects/chess_engine/build/CMakeFiles/ChessEngine.dir
+/home/manvendra/projects/chess_engine/build/CMakeFiles/edit_cache.dir
+/home/manvendra/projects/chess_engine/build/CMakeFiles/rebuild_cache.dir
