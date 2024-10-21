@@ -20,6 +20,6 @@ private:
     QVector<QLabel *> labels;
 
     const int boardSize = 8;
-};  // Added semicolon here
+};
 
 #endif

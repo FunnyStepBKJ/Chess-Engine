@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-2f413147ffa5d67b43c7.json",
+					"jsonFile" : "directory-.-Debug-5b54f0316ab959c070f2.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "chess_engine_ui::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-chess_engine_ui-Debug-d4e8196906f03064bc8d.json",
+					"jsonFile" : "target-chess_engine_ui-Debug-6c7b61526c451c200316.json",
 					"name" : "chess_engine_ui",
 					"projectIndex" : 0
 				},

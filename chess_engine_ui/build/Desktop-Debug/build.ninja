@@ -101,7 +101,7 @@ build chess_engine_ui: CXX_EXECUTABLE_LINKER__chess_engine_ui_Debug CMakeFiles/c
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = /usr/lib/libQt5Widgets.so.5.15.15  /usr/lib/libQt5Gui.so.5.15.15  /usr/lib/libQt5Core.so.5.15.15
   OBJECT_DIR = CMakeFiles/chess_engine_ui.dir
-  POST_BUILD = :
+  POST_BUILD = cd /home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug && /usr/bin/cmake -E copy_directory /home/manvendra/projects/chess_engine/chess_engine_ui/../assets /home/manvendra/projects/chess_engine/chess_engine_ui/build/Desktop-Debug/assets
   PRE_LINK = :
   TARGET_FILE = chess_engine_ui
   TARGET_PDB = chess_engine_ui.dbg

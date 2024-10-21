@@ -44,6 +44,11 @@ endif()
 
 target_link_libraries(chess_engine_ui PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
+add_custom_command(TARGET chess_engine_ui POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/../assets ${CMAKE_BINARY_DIR}/assets
+)
+
 # Set properties for macOS bundles if necessary
 set_target_properties(chess_engine_ui PROPERTIES
     MACOSX_BUNDLE TRUE
@@ -61,3 +66,4 @@ install(TARGETS chess_engine_ui
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(chess_engine_ui)
 endif()
+
