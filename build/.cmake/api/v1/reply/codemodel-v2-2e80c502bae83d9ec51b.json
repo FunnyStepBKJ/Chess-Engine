@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.10.0"
+						"string" : "3.10"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ChessEngine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ChessEngine-4481c6c63ce165de7554.json",
+					"jsonFile" : "target-ChessEngine-f6e4a96e979cf61e4047.json",
 					"name" : "ChessEngine",
 					"projectIndex" : 0
 				}

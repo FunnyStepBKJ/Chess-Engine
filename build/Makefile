@@ -129,6 +129,30 @@ ChessEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessEngine.dir/build.make CMakeFiles/ChessEngine.dir/build
 .PHONY : ChessEngine/fast
 
+src/ChessBoard.o: src/ChessBoard.cpp.o
+.PHONY : src/ChessBoard.o
+
+# target to build an object file
+src/ChessBoard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessEngine.dir/build.make CMakeFiles/ChessEngine.dir/src/ChessBoard.cpp.o
+.PHONY : src/ChessBoard.cpp.o
+
+src/ChessBoard.i: src/ChessBoard.cpp.i
+.PHONY : src/ChessBoard.i
+
+# target to preprocess a source file
+src/ChessBoard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessEngine.dir/build.make CMakeFiles/ChessEngine.dir/src/ChessBoard.cpp.i
+.PHONY : src/ChessBoard.cpp.i
+
+src/ChessBoard.s: src/ChessBoard.cpp.s
+.PHONY : src/ChessBoard.s
+
+# target to generate assembly for a file
+src/ChessBoard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessEngine.dir/build.make CMakeFiles/ChessEngine.dir/src/ChessBoard.cpp.s
+.PHONY : src/ChessBoard.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ChessEngine"
+	@echo "... src/ChessBoard.o"
+	@echo "... src/ChessBoard.i"
+	@echo "... src/ChessBoard.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
