@@ -17,6 +17,21 @@ ChessBoard::ChessBoard() {
     blackRooks = 0x8100000000000000; // 0b1000000100000000000000000000000000000000000000000000000000000000
     blackQueen = 0x0800000000000000; // 0b0000100000000000000000000000000000000000000000000000000000000000
     blackKing = 0x1000000000000000; // 0b0001000000000000000000000000000000000000000000000000000000000000
+
+    // Initialize the arrays with pointers to bitboards
+    whitePieces[0] = &whitePawns;
+    whitePieces[1] = &whiteKnights;
+    whitePieces[2] = &whiteBishops;
+    whitePieces[3] = &whiteRooks;
+    whitePieces[4] = &whiteQueen;
+    whitePieces[5] = &whiteKing;
+
+    blackPieces[0] = &blackPawns;
+    blackPieces[1] = &blackKnights;
+    blackPieces[2] = &blackBishops;
+    blackPieces[3] = &blackRooks;
+    blackPieces[4] = &blackQueen;
+    blackPieces[5] = &blackKing;
 }
 
 // Combines all the bitboard into one main board that will be displayed.
@@ -45,6 +60,7 @@ void ChessBoard::renderBoard() {
     unsigned long long chessBoard = combineBitBoards();
 
     for (int rank = 7; rank >=0; --rank) {
+        std::cout << "                                      ";
         for (int file = 0; file < 8; file++) {
             int index = rank * 8 + file;
             unsigned long long bit = 1ULL << index;
@@ -58,7 +74,7 @@ void ChessBoard::renderBoard() {
             else if ((whiteKing & bit) != 0) std::cout << "WK "; 
 
             // Check for black pieces 
-            else if ((blackPawns & bit) != 0) std::cout << "BP "; 
+            else if ((blackPawns & bit) != 0) std::cout << "BP ";
             else if ((blackKnights & bit) != 0) std::cout << "BN "; 
             else if ((blackBishops & bit) != 0) std::cout << "BB "; 
             else if ((blackRooks & bit) != 0) std::cout << "BR "; 
@@ -68,4 +84,36 @@ void ChessBoard::renderBoard() {
         }
         std::cout << std::endl;
     }
+}
+
+// Moves the piece from the provided parameters "fromFile & fromRank" to "toFile & and toRank" 
+bool ChessBoard::movePiece(const std::string& fromSquare, const std::string& toSquare) {
+    int fF = fromSquare[0] - 'a';
+    int fR = fromSquare[1] - '1';
+    int tF = toSquare[0] - 'a';
+    int tR = toSquare[1] - '1';
+
+    int initialPosition = fR * 8 + fF;
+    int newPosition = tR * 8 + tF;
+
+    unsigned long long iPiecePosition = 1ULL << initialPosition;
+    unsigned long long nPiecePosition = 1ULL << newPosition;
+    
+    // Check for white pieces
+    for (int i = 0; i < 6; i++) {
+        if ((*whitePieces[i] & iPiecePosition) != 0) {
+            *whitePieces[i] = (*whitePieces[i] ^ iPiecePosition) | nPiecePosition;
+            return true;
+        }
+    }
+
+    // Check for black pieces 
+    for (int i = 0; i < 6; i++) {
+        if ((*blackPieces[i] & iPiecePosition) != 0) {
+            *blackPieces[i] = (*blackPieces[i] ^ iPiecePosition) | nPiecePosition;
+            return true; 
+        }
+    }
+
+    return false;
 }
